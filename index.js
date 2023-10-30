@@ -100,7 +100,7 @@ app.get("/protected", (req, res) => {
 app.post("/summarize", (req, res) => {
 
 
-  if (req.auth) {
+  // if (req.auth) {
     
     const text = req.body.text_to_summarize;
     console.log(text)
@@ -111,9 +111,9 @@ app.post("/summarize", (req, res) => {
       .catch(error => {
         console.log(error.message);
       });
-  }else{
-    res.status(401).json({ error: "Unauthorized" });
-  }
+  // }else{
+  //   res.status(401).json({ error: "Unauthorized" });
+  // }
   // get the text_to_summarize property from the request body
 
 });

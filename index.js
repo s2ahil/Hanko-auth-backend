@@ -101,7 +101,7 @@ app.post("/summarize", (req, res) => {
 
 
   // if (req.auth) {
-    console.log(req.cookies)
+    console.log(JSON.stringify(req.cookies))
     const text = req.body.text_to_summarize;
     console.log(text)
     summarizeText(text)

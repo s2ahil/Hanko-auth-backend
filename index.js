@@ -97,7 +97,7 @@ app.get("/protected", (req, res) => {
   }
 });
 
-app.post("/summarize", Middleware, (req, res) => {
+app.post("/summarize", (req, res) => {
 
 
   if (req.auth) {

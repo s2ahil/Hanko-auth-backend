@@ -58,8 +58,8 @@ async function Middleware(req, res, next) {
 
 
   const token = req.cookies.hanko;
-
-  console.log("token", token)
+const token2= req.cookies;
+  console.log("token", token,token2)
 
   if (!token) {
     return res.status(401).json({ error: "Unauthorized" });
